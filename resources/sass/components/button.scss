@@ -1,6 +1,6 @@
 @layer components {
     .btn {
-        @apply flex bg-gray-500 rounded-lg px-4 py-2 text-white text-base font-medium shadow-md items-center;
+        @apply flex bg-gray-500 rounded-lg px-4 py-2 text-white text-base font-medium items-center;
 
         @screen md {
             @apply px-6 text-lg;
@@ -18,35 +18,36 @@
         }
 
         &:hover {
-             @apply bg-gray-600;
-         }
+            @apply bg-gray-600;
+        }
 
         &:focus {
-             @apply outline-none border-transparent ring-4 ring-primary ring-opacity-50;
+            @apply outline-none border-transparent;
         }
     }
 
-
     .btn-primary {
-        @apply bg-primary text-white shadow-md;
+        @apply bg-[#0F8352] text-white;
 
         &:hover {
-            @apply bg-primary-lighter text-white shadow-lg;
+            @apply bg-[#14AE6D] text-white;
         }
 
+        &:active {
+            @apply bg-[#0A5737];
+        }
     }
 
     .btn-secondary {
         @apply bg-white border-2 border-primary-lighter text-black shadow-md;
 
-    &:hover {
-        @apply bg-white border-primary-darker shadow-lg;
-    }
+        &:hover {
+            @apply bg-white border-primary-darker shadow-lg;
+        }
 
-    &:focus {
-        @apply border-2 border-transparent;
-    }
-
+        &:focus {
+            @apply border-2 border-transparent;
+        }
     }
 
     .btn-size-lg {

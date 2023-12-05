@@ -14,7 +14,31 @@ h2 {
 }
 
 a {
-    @apply text-primary hover:text-primary-lighter active:text-primary-darker;
+    &:hover {
+        @apply text-[#0F8352];
+    }
+
+    &:active {
+        @apply text-[#0A5737];
+    }
 }
 
+.footer-link {
+    @apply text-[#02170E] text-base leading-6;
+}
 
+.header-link {
+    @apply text-sm leading-5 font-medium uppercase tracking-wider;
+}
+
+.navigation-icon {
+    @apply text-black;
+
+    &:hover {
+        @apply text-[#14AE6D];
+    }
+
+    &:active {
+        @apply text-[#0A5737];
+    }
+}

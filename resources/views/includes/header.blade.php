@@ -8,7 +8,7 @@
         no-underline hover:no-underline font-title" href="#" title="" aria-label="store logo">
                     <img
                         src="{{ asset("images/logo.svg") }}"
-                        title="" alt="" width="189" height="53">
+                        >
                 </a>
             </div>
 
@@ -38,37 +38,37 @@
                     <nav class="w-full duration-150 ease-in-out transform flex justify-start w-auto relative min-h-0 transition-display">
                         <div class="relative mr-2 level-0">
                             <span class="flex items-center block p-3 text-md bg-opacity-95">
-                                <a data-test="header-link" class="w-full py-3 text-base text-gray-700 hover:underline level-0"
+                                <a data-test="header-link" class="header-link"
                                    href="#" title="What's New">What's New</a>
                             </span>
                         </div>
                         <div class="relative mr-2 level-0">
                             <span class="flex items-center block p-3 text-md bg-opacity-95">
-                                <a data-test="header-link" class="w-full py-3 text-base text-gray-700 hover:underline level-0"
+                                <a data-test="header-link" class="header-link"
                                    href="#" title="Women">Women</a>
                             </span>
                         </div>
                         <div class="relative mr-2 level-0">
                             <span class="flex items-center block p-3 text-md bg-opacity-95">
-                                <a data-test="header-link" class="w-full py-3 text-base text-gray-700 hover:underline level-0"
+                                <a data-test="header-link" class="header-link"
                                    href="#" title="Men">Men</a>
                             </span>
                         </div>
                         <div class="relative mr-2 level-0">
                             <span class="flex items-center block p-3 text-md bg-opacity-95">
-                                <a data-test="header-link" class="w-full py-3 text-base text-gray-700 hover:underline level-0"
+                                <a data-test="header-link" class="header-link"
                                    href="#" title="Gear">Gear</a>
                             </span>
                         </div>
                         <div class="relative mr-2 level-0">
                             <span class="flex items-center block p-3 text-md bg-opacity-95">
-                                <a data-test="header-link" class="w-full py-3 text-base text-gray-700 hover:underline level-0"
+                                <a data-test="header-link" class="header-link"
                                    href="#" title="Training">Training</a>
                             </span>
                         </div>
                         <div class="relative mr-2 level-0">
                             <span class="flex items-center block p-3 text-md bg-opacity-95">
-                                <a data-test="header-link" class="w-full py-3 text-base text-gray-700 hover:underline level-0"
+                                <a data-test="header-link" class="header-link"
                                    href="#" title="Sale">Sale</a>
                             </span>
                         </div>
@@ -80,7 +80,7 @@
                 <!--My Account Icon-->
                 <div class="relative inline-block ml-1 sm:ml-3">
                     <a data-test="header-icon" href="#" id="customer-menu"
-                       class="block hover:text-black" aria-label="My Account" aria-expanded="false">
+                       class="block icon" aria-label="My Account" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                              stroke="currentColor" class="md:h-6 md:w-6" width="32" height="32" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -93,12 +93,12 @@
                 <a
                     data-test="header-icon"
                     id="menu-cart-icon"
-                    class="relative inline-block ml-1 no-underline sm:ml-3 hover:text-black"
+                    class="relative inline-block ml-1 no-underline sm:ml-3 icon"
                     href="#"
                 >
                     <span class="sr-only label">Cart</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                         class="w-8 h-8 md:h-6 md:w-6 hover:text-black" width="25" height="25">
+                         class="w-8 h-8 md:h-6 md:w-6" width="25" height="25">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                               d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
                     </svg>

@@ -62,3 +62,19 @@ fieldset ~ fieldset {
         @apply border-primary-lighter ring ring-primary ring-opacity-50;
     }
 }
+
+.error-message {
+    @apply text-red-500 font-bold;
+}
+
+.form-checkbox {
+    @apply text-[#6D6D6D] text-sm leading-5 font-medium uppercase tracking-wider rounded;
+
+    &:hover {
+        @apply text-[#14AE6D];
+    }
+
+    &:active {
+        @apply text-[#0A5737];
+    }
+}
