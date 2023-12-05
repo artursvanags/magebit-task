@@ -7,7 +7,102 @@
   \*****************************/
 /***/ (() => {
 
+document.addEventListener('DOMContentLoaded', function () {
+  // Helper function to create error message element
+  var createErrorMessage = function createErrorMessage(message) {
+    var div = document.createElement('div');
+    div.textContent = message;
+    div.classList.add('error-message', 'text-red-500', 'text-sm', 'mt-2');
+    return div;
+  };
 
+  // Helper function to validate email
+  var validateEmail = function validateEmail(input) {
+    var emailPattern = /^\S+@\S+\.\S+$/;
+    var value = input.value.trim();
+    if (!value) {
+      return "Email address is required";
+    } else if (!emailPattern.test(value)) {
+      return "Please provide a valid e-mail address";
+    }
+    return null;
+  };
+
+  // Helper function to validate required field
+  var validateRequiredField = function validateRequiredField(input, fieldName) {
+    if (!input.value.trim()) {
+      return "".concat(fieldName, " is required");
+    }
+    return null;
+  };
+
+  // Helper function to remove existing error messages
+  var removeErrorMessage = function removeErrorMessage(input) {
+    var error = input.parentNode.querySelector('.error-message');
+    if (error) {
+      error.remove();
+    }
+  };
+
+  // Helper function to display error messages
+  var displayError = function displayError(input, message) {
+    removeErrorMessage(input);
+    var error = createErrorMessage(message);
+    input.parentNode.appendChild(error);
+  };
+
+  // Function to handle form validation
+  var handleFormValidation = function handleFormValidation(event) {
+    event.preventDefault();
+    var form = event.target;
+    var emailInput = form.querySelector('input[type="email"]');
+    var passwordInput = form.querySelector('input[name="password"]');
+    var passConfirmInput = form.querySelector('input[name="passwordConfirm"]');
+    var isValid = true;
+
+    // Email validation
+    var emailError = validateEmail(emailInput);
+    if (emailError) {
+      displayError(emailInput, emailError);
+      isValid = false;
+    } else {
+      removeErrorMessage(emailInput);
+    }
+
+    // Password validation
+    var passwordError = validateRequiredField(passwordInput, 'Password');
+    if (passwordError) {
+      displayError(passwordInput, passwordError);
+      isValid = false;
+    } else {
+      removeErrorMessage(passwordInput);
+    }
+
+    // Password confirmation validation (only for registration form)
+    if (passConfirmInput) {
+      var passConfirmError = passwordInput.value.trim() === passConfirmInput.value.trim() ? null : "Passwords must match";
+      if (passConfirmError) {
+        displayError(passConfirmInput, passConfirmError);
+        isValid = false;
+      } else {
+        removeErrorMessage(passConfirmInput);
+      }
+    }
+
+    // If all validations pass, submit the form
+    if (isValid) {
+      form.submit();
+    }
+  };
+
+  // Get the login and registration forms
+  var loginForm = document.getElementById('customer-login-form');
+  var registrationForm = document.getElementById('customer-registration-form');
+
+  // Attach event listeners to both forms
+  loginForm.addEventListener('submit', handleFormValidation);
+  registrationForm.addEventListener('submit', handleFormValidation);
+});
 
 /***/ }),
 
